@@ -45,8 +45,8 @@ export type ScenarioSteps =
     type: "oauth-consent";
     domain:string;
     appName: string;
-    permission: string[];
-    publicher?: string;
+    permissions: string[];
+    publisher?: string;
   }
   |{
     type: "mfa-request";
@@ -84,4 +84,67 @@ export interface ScenarioResponse {
   explanation: string;
   answeredAt: string;
 }
+
+export type ScenarioSteps =
+  | {
+      type: "classroom-entry";
+      serviceName: string;
+      actionLabel: string;
+    }
+  | {
+      type: "google-account-chooser";
+      domain: string;
+      email: string;
+    }
+  | {
+      type: "google-psw";
+      domain: string;
+      email: string;
+    }
+  | {
+      type: "oauth-consent";
+      domain: string;
+      appName: string;
+      permissions: string[];
+      publisher?: string;
+    }
+  | {
+      type: "mfa-request";
+      domain: string;
+      message: string;
+    }
+  | {
+      type: "browser-page";
+      domain: string;
+      heading: string;
+      body: string;
+    }
+  | {
+      type: "redirect";
+      fromDomain: string;
+      toDomain: string;
+      label?: string;
+    }
+  | {
+      type: "provider-selection";
+      providers: {
+        name: string;
+        domain?: string;
+      }[];
+    }
+  | {
+      type: "oidc-provider";
+      brand: string;
+      issuer: string;
+      authorizationEndpoint?: string;
+    }
+  | {
+      type: "saml-result";
+      issuer: string;
+      audience?: string;
+      recipient?: string;
+      identity?: string;
+      role?: string;
+      status?: string;
+    };
 

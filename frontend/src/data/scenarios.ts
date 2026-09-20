@@ -44,7 +44,7 @@ export const pilotScenarios: Scenario[] = [
     steps: [],
   },
 
-  /*
+  
   {
     id: "UC04",
     category: "baseline",
@@ -57,6 +57,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
+  
   {
     id: "UC05",
     category: "baseline",
@@ -86,7 +87,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  */
+  
   
   {
     id: "UC07",
@@ -113,7 +114,7 @@ export const pilotScenarios: Scenario[] = [
     type: "single-page",
     steps: [],
   },
-  /*
+  
   {
     id: "UC09",
     category: "fake_idp",
@@ -126,7 +127,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  */
+  
   {
     id: "UC10",
     category: "fake_idp",
