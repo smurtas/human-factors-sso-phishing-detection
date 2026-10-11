@@ -44,7 +44,7 @@ export const pilotScenarios: Scenario[] = [
     steps: [],
   },
 
-  
+
   {
     id: "UC04",
     category: "baseline",
@@ -57,7 +57,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  
+
   {
     id: "UC05",
     category: "baseline",
@@ -87,8 +87,8 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  
-  
+
+
   {
     id: "UC07",
     category: "fake_idp",
@@ -101,7 +101,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  
+
   {
     id: "UC08",
     category: "fake_idp",
@@ -114,7 +114,7 @@ export const pilotScenarios: Scenario[] = [
     type: "single-page",
     steps: [],
   },
-  
+
   {
     id: "UC09",
     category: "fake_idp",
@@ -127,7 +127,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  
+
   {
     id: "UC10",
     category: "fake_idp",
@@ -140,31 +140,34 @@ export const pilotScenarios: Scenario[] = [
     type: "single-page",
     steps: [],
   },
-  /*
   {
     id: "UC11",
     category: "fake_idp",
     protocol: "OIDC",
     title: "HTTPS con dominio falso",
     instruction:
-      "Valuta la pagina di autenticazione, considerando sia il certificato HTTPS sia il dominio mostrato.",
+      "Valuta la pagina di autenticazione, considerando sia la connessione HTTPS sia il dominio mostrato.",
     expectedAnswer: "malicious",
-    difficultyLevel: 2,
+    difficultyLevel: 3,
     type: "single-page",
     steps: [],
   },
+
   {
     id: "UC12",
     category: "fake_idp",
     protocol: "OIDC",
     title: "Logo corretto e dominio anomalo",
     instruction:
-      "Valuta la pagina Google mostrata, prestando attenzione all'indirizzo del sito.",
+      "Valuta la pagina di accesso Google mostrata, prestando attenzione all'indirizzo del sito.",
     expectedAnswer: "malicious",
-    difficultyLevel: 2,
+    difficultyLevel: 3,
     type: "single-page",
     steps: [],
   },
+  /*
+
+
 
   // =========================================================
   // OAUTH CONSENT ABUSE — UC13-UC19

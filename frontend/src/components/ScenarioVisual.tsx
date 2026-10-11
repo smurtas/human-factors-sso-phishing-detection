@@ -72,6 +72,23 @@ export function ScenarioVisual({
     case "UC10":
       return <MfaMockup />;
 
+
+    case "UC11":
+      return (
+        <BrowserMockup
+          domain="accounts.google.com.secure-login.school"
+          secure
+          provider="google"
+        />
+      );
+    case "UC12":
+      return (
+        <BrowserMockup
+          domain="accounts.g00gle.com"
+          secure
+          provider="google"
+        />
+      );
     default:
       return (
         <div className="scenario-placeholder">
