@@ -10,6 +10,7 @@ import { ParticipantPage } from "./pages/ParticipantPage";
 import { ResultsPage } from "./pages/ResultsPage";
 import { GoogleLoginPage } from "./pages/GoogleLoginPage";
 import { MicrosoftLoginPage } from "./pages/MicrosoftLoginPage";
+import { TestPage } from "./pages/TestPage";
 import { TeamsPage } from "./pages/TeamsPage";
 import "./App.css";
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/google-login" element={<GoogleLoginPage />} />
         <Route path="/microsoft-login" element={<MicrosoftLoginPage />} />
         <Route path="/teams" element={<TeamsPage />} />
+        <Route path="/test/:scenarioId" element={<TestPage />} />
         <Route path="*" element={<NotFoundPage />} />
 
       </Routes>

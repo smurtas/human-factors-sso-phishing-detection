@@ -2094,3 +2094,3852 @@
   color: #667085;
   font-size: 0.8rem;
 }
+/* =========================================================
+   UC06 - SCHOOL LOGIN PAGES
+   GestOre (Buonarroti) + REL (Marconi/Tambosi)
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   COMMON SIMULATED BROWSER
+   --------------------------------------------------------- */
+
+.gestore-browser,
+.rel-browser {
+  width: 100%;
+  max-width: none;
+
+  overflow: hidden;
+
+  border: 1px solid #d5d9e0;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   BUONARROTI - GESTORE
+   ========================================================= */
+
+.gestore-page {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+
+  box-sizing: border-box;
+
+  padding:
+    36px
+    clamp(24px, 4vw, 72px)
+    50px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #e7f7ff 0%,
+      #ffffff 48%,
+      #fff0f0 100%
+    );
+}
+
+
+/* ---------------------------------------------------------
+   HEADER / SCHOOL BRAND
+   --------------------------------------------------------- */
+
+.gestore-heading {
+  text-align: center;
+}
+
+.gestore-school-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 22px;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 9px 26px rgba(0, 0, 0, 0.10);
+}
+
+.gestore-school-symbol {
+  display: flex;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  background: #1468b3;
+  color: #ffffff;
+
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.gestore-school-logo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gestore-school-logo strong {
+  color: #1668b4;
+
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.gestore-school-logo small {
+  margin-top: 4px;
+
+  color: #1668b4;
+
+  font-size: 0.78rem;
+}
+
+.gestore-heading h1 {
+  margin: 24px 0 4px;
+
+  font-size: 2.1rem;
+  line-height: 1.1;
+}
+
+.gestore-heading p {
+  margin: 0 0 28px;
+
+  color: #58677f;
+
+  font-size: 1rem;
+}
+
+
+/* ---------------------------------------------------------
+   PASSKEY
+   --------------------------------------------------------- */
+
+.gestore-passkey {
+  display: block;
+
+  width: min(720px, 100%);
+
+  margin: 0 auto 30px;
+
+  padding: 15px 22px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: #13963f;
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------
+   THREE LOGIN COLUMNS
+   --------------------------------------------------------- */
+
+.gestore-login-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: clamp(18px, 2vw, 30px);
+
+  align-items: stretch;
+}
+
+.gestore-column {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 470px;
+
+  box-sizing: border-box;
+
+  padding: 22px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 18px rgba(30, 50, 80, 0.08);
+}
+
+.gestore-column-google {
+  border-top: 7px solid #16a5db;
+}
+
+.gestore-column-mastercom {
+  border-top: 7px solid #ef3535;
+}
+
+.gestore-column-identity {
+  border-top: 7px solid #172e45;
+}
+
+
+/* ---------------------------------------------------------
+   COLUMN HEADERS
+   --------------------------------------------------------- */
+
+.gestore-column-label {
+  margin-bottom: 14px;
+
+  padding: 8px 10px;
+
+  border-radius: 16px;
+
+  background: #e8f5fc;
+
+  text-align: center;
+
+  color: #056698;
+
+  font-weight: 700;
+}
+
+.gestore-column-mastercom
+.gestore-column-label {
+  background: #ffe6e6;
+  color: #b71d1d;
+}
+
+.gestore-column-identity
+.gestore-column-label {
+  background: #e9f0fa;
+  color: #07558f;
+}
+
+.gestore-column h2 {
+  margin: 0 0 18px;
+
+  text-align: center;
+
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+
+/* ---------------------------------------------------------
+   COLUMN CONTENT
+   --------------------------------------------------------- */
+
+.gestore-column p,
+.gestore-column li,
+.gestore-column small {
+  color: #59677e;
+
+  line-height: 1.45;
+}
+
+.gestore-column p {
+  margin-top: 0;
+}
+
+.gestore-column ul {
+  margin: 4px 0 20px;
+
+  padding-left: 22px;
+}
+
+.gestore-info-box {
+  margin-bottom: 16px;
+
+  padding: 14px;
+
+  border: 1px solid #bdd8ea;
+  border-radius: 10px;
+
+  background: #eef8fd;
+
+  text-align: center;
+
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.gestore-info-mastercom {
+  border-color: #ffb7b7;
+
+  background: #fff0f0;
+  color: #ac2323;
+}
+
+
+/* ---------------------------------------------------------
+   MASTERCOM INPUTS
+   --------------------------------------------------------- */
+
+.gestore-column input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin: 7px 0;
+
+  padding: 13px;
+
+  border: 1px solid #d3d7dd;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  font-size: 0.95rem;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTONS
+   --------------------------------------------------------- */
+
+.gestore-google-button,
+.gestore-mastercom-button,
+.gestore-spid-button,
+.gestore-cie-button {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-top: auto;
+
+  padding: 14px 17px;
+
+  border: 0;
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.gestore-google-button {
+  background: #0a9cd6;
+}
+
+.gestore-google-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 8px;
+
+  padding: 2px 6px;
+
+  border-radius: 3px;
+
+  background: #ffffff;
+  color: #4285f4;
+
+  font-weight: 800;
+}
+
+.gestore-mastercom-button {
+  background: #ef3838;
+}
+
+.gestore-spid-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background:#2966CB;
+}
+
+.gestore-cie-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 10px;
+
+  background: #153c59;
+}
+
+
+/* =========================================================
+   REL - PROVINCIA AUTONOMA DI TRENTO
+   ========================================================= */
+
+.rel-page {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   PAT TOP BAR
+   --------------------------------------------------------- */
+
+.rel-pat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 72px;
+  max-height: 72px;
+
+  box-sizing: border-box;
+
+  padding:
+    18px
+    clamp(24px, 7vw, 110px);
+
+  background: #2f373d;
+  color: #ffffff;
+}
+
+.rel-pat-header > strong {
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO TRENTINO
+   --------------------------------------------------------- */
+
+.rel-trentino-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.rel-trentino-logo img {
+  display: block;
+
+  width: 200px;
+  height: auto;
+  
+
+  max-height: 72px;
+
+  object-fit: contain;
+}
+
+
+/* ---------------------------------------------------------
+   REL BLUE HEADER
+   --------------------------------------------------------- */
+
+.rel-titlebar {
+  display: grid;
+
+  grid-template-columns:
+    72px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 26px;
+
+  box-sizing: border-box;
+
+  padding:
+    26px
+    clamp(24px, 7vw, 110px);
+
+  background: #006390;
+  color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   STEMMA PAT
+   --------------------------------------------------------- */
+
+.rel-header-logo {
+  display: flex;
+
+  width: 62px;
+  height: 82px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.rel-header-logo img {
+  display: block;
+
+  width: auto;
+  height: 76px;
+
+  max-width: 62px;
+
+  object-fit: contain;
+}
+
+
+/* ---------------------------------------------------------
+   TITOLO REL
+   --------------------------------------------------------- */
+
+.rel-titlebar h1 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.rel-titlebar p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1.05rem;
+
+  line-height: 1.35;
+}
+
+
+/* ---------------------------------------------------------
+   MENU
+   --------------------------------------------------------- */
+
+.rel-menu {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 2rem;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   LOGIN OPTIONS
+   ========================================================= */
+
+.rel-options {
+  display: grid;
+
+  width: 100%;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  box-sizing: border-box;
+
+  padding:
+    26px
+    clamp(24px, 3vw, 50px)
+    50px;
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN CARD
+   --------------------------------------------------------- */
+
+.rel-login-card {
+  min-width: 0;
+  min-height: 330px;
+
+  box-sizing: border-box;
+
+  padding: 24px;
+
+  background: #f4f4f4;
+}
+
+.rel-login-card h2 {
+  margin: 0;
+
+  color: #035b7a;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.rel-login-card h2 span {
+  font-size: 0.8rem;
+}
+
+.rel-login-card > p {
+  margin:
+    4px
+    0
+    0;
+
+  font-size: 1.05rem;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   COMMON LOGIN BUTTONS
+   ========================================================= */
+
+.rel-user-button,
+.rel-spid-button,
+.rel-cps-button,
+.rel-cie-button {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+  min-height: 62px;
+
+  box-sizing: border-box;
+
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    45px
+    0
+    20px;
+
+  padding:
+    12px
+    18px;
+
+  border: 0;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+
+/*
+ * Se nel TSX il testo è dentro:
+ *
+ * <span className="rel-button-text">
+ *   Entra con SPID
+ * </span>
+ *
+ * rimane perfettamente centrato.
+ */
+
+.rel-button-text {
+  width: 100%;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   UTENTE / PASSWORD
+   ========================================================= */
+
+.rel-user-button {
+  border: 1px solid #777777;
+
+  background: #ffffff;
+  color: #555555;
+}
+
+
+/*
+ * Funziona sia se rel-user-logo è uno span
+ * sia se successivamente userai un'immagine.
+ */
+
+.rel-user-logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  color: #08739a;
+
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SPID
+   ========================================================= */
+
+.rel-spid-button {
+  background: #2966cb;
+  color: #ffffff;
+}
+
+.rel-spid-button .rel-button-logo {
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: block;
+
+  width: 72px;
+  height: 44px;
+
+  box-sizing: content-box;
+
+  padding-right: 14px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   CPS / CNS
+   ========================================================= */
+
+.rel-cps-button {
+  background: #b95137;
+  color: #ffffff;
+}
+
+
+/*
+ * CPS deve essere un po' più piccolo
+ * rispetto ai loghi SPID e CIE.
+ */
+
+.rel-cps-button .rel-button-logo {
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: block;
+
+  width: 62px;
+  height: 36px;
+
+  box-sizing: content-box;
+
+  padding-right: 14px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   CIE
+   ========================================================= */
+
+.rel-cie-button {
+  background: #2966cb;
+  color: #ffffff;
+}
+
+.rel-cie-button .rel-button-logo {
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: block;
+
+  width: 68px;
+  height: 48px;
+
+  box-sizing: content-box;
+
+  padding-right: 14px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TEXT / LINKS
+   ========================================================= */
+
+.rel-login-card a {
+  color: #006d94;
+
+  text-decoration: underline;
+}
+
+.rel-login-card small {
+  display: block;
+
+  line-height: 1.35;
+}
+
+.rel-card-text {
+  margin-bottom: 4px;
+}
+
+
+/*
+ * CIE sulla seconda riga,
+ * come nella pagina REL reale.
+ */
+
+.rel-login-card:nth-child(4) {
+  grid-column: 1;
+}
+
+
+/* =========================================================
+   TEST PAGE - FULL VIEWPORT WIDTH
+   ========================================================= */
+
+.scenario-test-page {
+  width: 100%;
+  max-width: none;
+}
+
+.scenario-test-info {
+  margin-bottom: 28px;
+}
+
+
+/*
+ * Esce dal contenitore centrale di AppLayout.
+ */
+
+.scenario-full-bleed {
+  position: relative;
+
+  left: 50%;
+
+  width: 100vw;
+
+  margin-left: -50vw;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    18px
+    40px;
+}
+
+
+/* Browser simulati full width */
+
+.scenario-full-bleed .gestore-browser,
+.scenario-full-bleed .rel-browser {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .gestore-login-grid,
+  .rel-options {
+    grid-template-columns: 1fr;
+  }
+
+  .rel-login-card:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .gestore-column {
+    min-height: auto;
+  }
+
+  .rel-login-card {
+    min-height: auto;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .scenario-full-bleed {
+    padding:
+      0
+      8px
+      30px;
+  }
+
+
+  /* PAT TOP BAR */
+
+  .rel-pat-header {
+    min-height: 60px;
+
+    padding:
+      14px
+      16px;
+  }
+
+  .rel-pat-header > strong {
+    font-size: 0.85rem;
+  }
+
+  .rel-trentino-logo img {
+    width: 105px;
+    max-height: 40px;
+  }
+
+
+  /* BLUE HEADER */
+
+  .rel-titlebar {
+    grid-template-columns:
+      52px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 14px;
+
+    padding:
+      20px
+      16px;
+  }
+
+  .rel-header-logo {
+    width: 48px;
+    height: 66px;
+  }
+
+  .rel-header-logo img {
+    height: 62px;
+    max-width: 48px;
+  }
+
+  .rel-titlebar h1 {
+    font-size: 1.4rem;
+  }
+
+  .rel-titlebar p {
+    font-size: 0.9rem;
+  }
+
+  .rel-menu {
+    font-size: 1.6rem;
+  }
+
+
+  /* LOGIN CARDS */
+
+  .rel-options {
+    padding:
+      18px
+      14px
+      35px;
+  }
+
+  .rel-login-card {
+    padding: 20px;
+  }
+
+
+  /* BUTTONS */
+
+  .rel-user-button,
+  .rel-spid-button,
+  .rel-cps-button,
+  .rel-cie-button {
+    margin-top: 28px;
+
+    font-size: 1rem;
+  }
+
+
+  /* SPID MOBILE */
+
+  .rel-spid-button .rel-button-logo {
+    left: 10px;
+
+    width: 58px;
+    height: 38px;
+
+    padding-right: 10px;
+  }
+
+
+  /* CPS MOBILE */
+
+  .rel-cps-button .rel-button-logo {
+    left: 10px;
+
+    width: 50px;
+    height: 31px;
+
+    padding-right: 10px;
+  }
+
+
+  /* CIE MOBILE */
+
+  .rel-cie-button .rel-button-logo {
+    left: 10px;
+
+    width: 56px;
+    height: 38px;
+
+    padding-right: 10px;
+  }
+}
+.rel-user-button img {
+  width: 70px;
+  height: 38px;
+
+  object-fit: contain;
+
+  margin-right: 14px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   Button uc6 - 
+   ========================================================= */
+.uc06-evaluation-action {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 28px 20px 10px;
+
+  box-sizing: border-box;
+}
+/* =========================================================
+   UC09 - SPID PROVIDER SELECTION
+   ========================================================= */
+
+.spid-selection-browser {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 1px solid #cfd5dc;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 28px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   BROWSER TOOLBAR
+   --------------------------------------------------------- */
+
+.spid-browser-toolbar {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 54px;
+
+  box-sizing: border-box;
+
+  padding:
+    9px
+    16px;
+
+  background: #edf1f5;
+}
+
+
+.spid-browser-controls {
+  display: flex;
+
+  gap: 6px;
+
+  color: #9aa4b1;
+
+  font-size: 0.7rem;
+
+  flex-shrink: 0;
+}
+
+
+.spid-browser-address {
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+
+  gap: 4px;
+
+  box-sizing: border-box;
+
+  padding:
+    8px
+    14px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #343a40;
+
+  font-size: 0.92rem;
+
+  overflow: hidden;
+}
+
+
+.spid-browser-lock {
+  margin-right: 3px;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.spid-selection-page {
+  display: flex;
+
+  width: 100%;
+  min-height: 650px;
+
+  box-sizing: border-box;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding:
+    40px
+    20px
+    70px;
+
+  background: #f5f5f5;
+}
+
+
+/* =========================================================
+   PROVIDER PANEL
+   ========================================================= */
+
+.spid-selection-panel {
+  width: min(520px, 100%);
+
+  box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN SPID BUTTON
+   --------------------------------------------------------- */
+
+.spid-main-button {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    1fr;
+
+  align-items: center;
+
+  min-height: 88px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border:
+    3px solid
+    #f6a43a;
+
+  border-radius: 4px;
+
+  background: #07599c;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 2px 4px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+.spid-person-icon {
+  display: flex;
+
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  color: #ffffff;
+
+  font-size: 2.5rem;
+}
+
+
+.spid-main-button > span {
+  padding:
+    14px
+    22px;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   PROVIDER LIST
+   ========================================================= */
+
+.spid-provider-list {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    #d4d4d4;
+
+  border-top: 0;
+
+  background: #ffffff;
+}
+
+
+.spid-provider-row {
+  display: flex;
+
+  width: 100%;
+  min-height: 102px;
+
+  box-sizing: border-box;
+
+  align-items: center;
+
+  padding:
+    14px
+    18px;
+
+  border: 0;
+  border-bottom:
+    1px solid
+    #dddddd;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.spid-provider-row:last-child {
+  border-bottom: 0;
+}
+
+
+.spid-provider-row:hover {
+  background: #f8f8f8;
+}
+
+
+/* =========================================================
+   POSTE-LIKE
+   ========================================================= */
+
+.mock-poste-logo {
+  display: flex;
+
+  align-items: center;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 2.15rem;
+}
+
+
+.mock-poste-word {
+  padding:
+    8px
+    9px;
+
+  border:
+    4px solid
+    #0753ad;
+
+  color: #0753ad;
+
+  font-weight: 800;
+}
+
+
+.mock-poste-id {
+  padding:
+    8px
+    10px;
+
+  background: #f1df00;
+
+  color: #094fa4;
+
+  font-weight: 800;
+}
+
+
+.mock-spid-small {
+  margin-left: 9px;
+
+  color: #1763b5;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  text-transform: lowercase;
+}
+
+
+/* =========================================================
+   INFOCERT-LIKE
+   ========================================================= */
+
+.mock-infocert-logo {
+  display: flex;
+
+  align-items: center;
+
+  font-size: 2.65rem;
+  font-weight: 500;
+}
+
+
+.mock-info {
+  color: #2373b9;
+}
+
+
+.mock-cert {
+  color: #a5a5a5;
+}
+
+
+.mock-infocert-id {
+  margin-left: 12px;
+
+  padding:
+    5px
+    11px;
+
+  background: #247a9e;
+
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ARUBA-LIKE
+   ========================================================= */
+
+.mock-aruba-logo {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 10px;
+
+  font-family:
+    Georgia,
+    serif;
+}
+
+
+.mock-aruba-word {
+  color: #ef6b36;
+
+  font-size: 2.35rem;
+  font-weight: 700;
+}
+
+
+.mock-aruba-id {
+  padding:
+    4px
+    8px;
+
+  border-radius: 4px;
+
+  background: #1475bd;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LEPIDA-LIKE
+   ========================================================= */
+
+.mock-lepida-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #292929;
+
+  font-size: 2.2rem;
+
+  letter-spacing: -1px;
+}
+
+
+.mock-lepida-symbol {
+  margin-right: 2px;
+
+  color: #ef6a21;
+
+  font-size: 2.6rem;
+}
+
+
+.mock-lepida-logo strong {
+  color: #eb6a26;
+}
+
+
+/* =========================================================
+   CIVICA ID
+   Provider invented for the experimental stimulus
+   ========================================================= */
+
+.mock-civica-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-family:
+    Arial,
+    sans-serif;
+}
+
+
+.mock-civica-symbol {
+  display: flex;
+
+  width: 48px;
+  height: 48px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #237da2;
+
+  color: #ffffff;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+
+.mock-civica-name {
+  color: #185f83;
+
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+.mock-civica-logo strong {
+  color: #ef7b28;
+
+  font-size: 2rem;
+}
+
+
+.mock-civica-spid {
+  align-self: flex-end;
+
+  margin-bottom: 4px;
+
+  color: #1767aa;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SIELTE-LIKE
+   ========================================================= */
+
+.mock-sielte-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #0757a4;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 1.9rem;
+}
+
+
+.mock-sielte-symbol {
+  font-size: 3rem;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+.mock-sielte-logo strong {
+  font-weight: 800;
+}
+
+
+.mock-sielte-logo > span:last-child {
+  color: #e82e4d;
+
+  font-style: italic;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .spid-selection-page {
+    min-height: auto;
+
+    padding:
+      24px
+      12px
+      40px;
+  }
+
+
+  .spid-main-button {
+    grid-template-columns:
+      68px
+      1fr;
+
+    min-height: 70px;
+  }
+
+
+  .spid-main-button > span {
+    font-size: 1.55rem;
+  }
+
+
+  .spid-provider-row {
+    min-height: 86px;
+  }
+
+
+  .mock-poste-logo,
+  .mock-lepida-logo,
+  .mock-civica-name,
+  .mock-civica-logo strong {
+    font-size: 1.5rem;
+  }
+
+
+  .mock-infocert-logo {
+    font-size: 1.8rem;
+  }
+
+
+  .mock-aruba-word {
+    font-size: 1.7rem;
+  }
+
+
+  .mock-sielte-logo {
+    font-size: 1.45rem;
+  }
+}
+/* =========================================================
+   GOOGLE OAUTH CONSENT
+   ========================================================= */
+
+.oauth-browser {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d6d9de;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Browser */
+
+.oauth-browser-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 8px 16px;
+  background: #e9edf2;
+}
+
+.oauth-browser-controls {
+  display: flex;
+  gap: 7px;
+  color: #9ba6b4;
+  font-size: 11px;
+}
+
+.oauth-browser-address {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: white;
+  color: #202124;
+  font-size: 14px;
+}
+
+
+/* Google background */
+
+.oauth-google-page {
+  min-height: 650px;
+  padding: 55px 70px 24px;
+  box-sizing: border-box;
+  background: #f0f4fb;
+}
+
+
+/* Main Google container */
+
+.oauth-google-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background: white;
+}
+
+
+/* Header */
+
+.oauth-google-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 62px;
+  padding: 0 28px;
+  box-sizing: border-box;
+  font-size: 17px;
+  color: #3c4043;
+}
+
+.google-g {
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+
+  background:
+    conic-gradient(
+      from -45deg,
+      #4285f4 0deg 90deg,
+      #34a853 90deg 180deg,
+      #fbbc05 180deg 260deg,
+      #ea4335 260deg 360deg
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.oauth-google-divider {
+  height: 1px;
+  background: #dadce0;
+}
+
+
+/* Two columns */
+
+.oauth-google-content {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  gap: 72px;
+  padding: 34px 38px 36px;
+}
+
+
+/* Left */
+
+.oauth-google-left {
+  padding: 4px 0;
+}
+
+
+.oauth-google-left h1 {
+  margin: 0 0 22px;
+  color: #202124;
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.oauth-account-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 5px 12px 5px 5px;
+
+  border: 1px solid #747775;
+  border-radius: 22px;
+
+  background: white;
+  color: #202124;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.oauth-account-avatar {
+  display: flex;
+
+  width: 29px;
+  height: 29px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #78909c;
+  color: white;
+
+  font-weight: 400;
+}
+
+.oauth-account-arrow {
+  margin-left: 3px;
+}
+
+
+/* Right */
+
+.oauth-google-right {
+  padding-top: 10px;
+}
+
+.oauth-google-right h2 {
+  max-width: 510px;
+
+  margin: 0 0 26px;
+
+  color: #202124;
+
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.oauth-google-right h2 strong {
+  color: #0b57d0;
+  font-weight: 500;
+}
+
+
+/* Permissions */
+
+.oauth-google-permissions {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.oauth-google-permission {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 13px;
+
+  align-items: start;
+}
+
+.oauth-permission-symbol {
+  color: #3c4043;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.oauth-google-permission strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #202124;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.oauth-google-permission span {
+  display: block;
+
+  color: #5f6368;
+
+  font-size: 14px;
+}
+
+
+/* Information */
+
+.oauth-google-info {
+  margin-top: 30px;
+
+  color: #202124;
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.oauth-google-info p {
+  margin: 0 0 13px;
+}
+
+.oauth-google-info a {
+  color: #0b57d0;
+
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* Actions */
+
+.oauth-google-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  margin-top: 34px;
+}
+
+.oauth-google-action {
+  height: 46px;
+
+  border: 1px solid #747775;
+  border-radius: 24px;
+
+  background: white;
+  color: #0b57d0;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.oauth-google-action:hover {
+  background: #f8fafd;
+}
+
+
+/* Footer */
+
+.oauth-google-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1120px;
+
+  margin: 22px auto 0;
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  color: #3c4043;
+
+  font-size: 13px;
+}
+
+.oauth-google-footer button {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  border: 0;
+
+  background: transparent;
+  color: inherit;
+
+  font-size: inherit;
+}
+
+.oauth-google-footer div {
+  display: flex;
+  gap: 28px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+  .oauth-google-page {
+    padding: 25px 14px;
+  }
+
+  .oauth-google-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    padding: 28px 25px;
+  }
+
+  .oauth-google-left h1 {
+    font-size: 30px;
+  }
+
+  .oauth-google-footer {
+    gap: 20px;
+  }
+}
+
+.oauth-app-logo {
+  width: 64px;
+  height: 64px;
+
+  margin-bottom: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+}
+
+.oauth-app-logo img {
+  display: block;
+
+  width: 64px;
+  height: 64px;
+
+  max-width: 64px;
+  max-height: 64px;
+
+  object-fit: contain;
+}
+
+.oauth-permission-symbol {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: #3c4043;
+}
+
+.oauth-permission-svg {
+  display: block;
+
+  width: 29px;
+  height: 29px;
+
+  color: #3c4043;
+}
+/* =========================================================
+   UC04 - SAML / SCHOOL PROFILE
+   ========================================================= */
+
+.uc04-browser {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #d9dde3;
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 18px 50px rgba(0, 0, 0, 0.08);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #202124;
+}
+
+
+/* Browser */
+
+.uc04-browser-toolbar {
+  position: relative;
+
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 18px;
+
+  background: #f1f3f4;
+
+  border-bottom: 1px solid #dadce0;
+}
+
+.uc04-browser-controls {
+  position: absolute;
+
+  display: flex;
+  gap: 7px;
+}
+
+.uc04-browser-controls span {
+  width: 11px;
+  height: 11px;
+
+  display: block;
+
+  border-radius: 50%;
+}
+
+.uc04-browser-controls span:nth-child(1) {
+  background: #ff5f57;
+}
+
+.uc04-browser-controls span:nth-child(2) {
+  background: #febc2e;
+}
+
+.uc04-browser-controls span:nth-child(3) {
+  background: #28c840;
+}
+
+.uc04-browser-address {
+  width: 54%;
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 15px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  font-size: 13px;
+
+  color: #4b5563;
+}
+
+.uc04-lock {
+  font-size: 11px;
+}
+
+
+/* Page */
+
+.uc04-page {
+  min-height: 620px;
+
+  background: #f5f7fa;
+}
+
+
+/* Header */
+
+.uc04-header {
+  min-height: 76px;
+
+  padding: 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e2e6ea;
+}
+
+.uc04-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.uc04-brand-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eef2f7;
+
+  color: #24466f;
+}
+
+.uc04-brand > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.uc04-brand strong {
+  font-size: 17px;
+}
+
+.uc04-brand span {
+  margin-top: 2px;
+
+  font-size: 12px;
+
+  color: #6b7280;
+}
+
+.uc04-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.uc04-header-user {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 14px;
+}
+
+.uc04-small-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #24466f;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* Navigation */
+
+.uc04-navigation {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 34px;
+
+  gap: 32px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.uc04-navigation span {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+
+  color: #5f6368;
+}
+
+.uc04-navigation-active {
+  color: #1f4f82 !important;
+  font-weight: 600;
+
+  border-bottom: 3px solid #1f4f82;
+}
+
+
+/* Main */
+
+.uc04-main {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 44px 36px 60px;
+}
+
+.uc04-main-header {
+  margin-bottom: 28px;
+}
+
+.uc04-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  color: #6b7280;
+}
+
+.uc04-main-header h1 {
+  margin: 7px 0 6px;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.uc04-main-header p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+
+/* Layout */
+
+.uc04-profile-layout {
+  display: grid;
+
+  grid-template-columns: 270px 1fr;
+
+  gap: 24px;
+}
+
+
+/* Summary */
+
+.uc04-profile-summary {
+  padding: 32px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5e9;
+  border-radius: 10px;
+}
+
+.uc04-avatar {
+  width: 86px;
+  height: 86px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: #24466f;
+
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.uc04-profile-summary h2 {
+  margin: 0 0 7px;
+
+  font-size: 21px;
+}
+
+.uc04-profile-summary p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #6b7280;
+
+  text-align: center;
+
+  word-break: break-word;
+}
+
+.uc04-role-badge {
+  margin-top: 20px;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  background: #eef3f8;
+
+  color: #24466f;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* Details */
+
+.uc04-profile-details {
+  padding: 28px 30px 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e5e9;
+  border-radius: 10px;
+}
+
+.uc04-details-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #e7e9ec;
+}
+
+.uc04-details-heading h2 {
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.uc04-details-heading p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+.uc04-details-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 30px;
+}
+
+.uc04-field {
+  padding: 21px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  border-bottom: 1px solid #eceff1;
+}
+
+.uc04-field span {
+  font-size: 12px;
+
+  color: #6b7280;
+}
+
+.uc04-field strong {
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #202124;
+}
+
+.uc04-field-wide {
+  grid-column: 1 / -1;
+}
+
+
+/* Responsive */
+
+@media (max-width: 760px) {
+
+  .uc04-profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .uc04-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uc04-field-wide {
+    grid-column: auto;
+  }
+
+  .uc04-header-user span {
+    display: none;
+  }
+
+  .uc04-navigation {
+    gap: 18px;
+
+    padding: 0 18px;
+  }
+
+  .uc04-main {
+    padding: 30px 18px 45px;
+  }
+
+}
+/* =========================================================
+   SPID PROVIDER LIST
+   ========================================================= */
+
+.spid-selection-panel {
+  width: 480px;
+  max-width: calc(100% - 32px);
+
+  margin: 0 auto;
+
+  background: #ffffff;
+}
+
+
+/* Pulsante Entra con SPID */
+
+.spid-main-button {
+  width: 100%;
+  height: 92px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 4px;
+
+  border: 2px solid #f4a340;
+
+  background: #07569d;
+
+  color: #ffffff;
+
+  font-size: 35px;
+  font-weight: 600;
+
+  box-sizing: border-box;
+}
+
+.spid-person-icon {
+  width: 138px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.spid-person-icon svg {
+  width: 66px;
+  height: 66px;
+
+  padding: 12px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #0871ce;
+
+  box-sizing: border-box;
+}
+
+.spid-main-button > span {
+  padding-left: 32px;
+}
+
+
+/* Provider */
+
+.spid-provider-list {
+  width: 100%;
+
+  border-left: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+}
+
+.spid-provider-row {
+  width: 100%;
+  height: 102px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 16px;
+
+  border: 0;
+  border-bottom: 1px solid #d1d1d1;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+.spid-provider-row:hover {
+  background: #f8f8f8;
+}
+
+
+/* Logo reali */
+
+.spid-provider-image {
+  display: block;
+
+  max-width: 100%;
+  max-height: 78px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/* =========================================================
+   CIVICA ID - provider fittizio
+   ========================================================= */
+
+.mock-civica-realistic {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  height: 70px;
+}
+
+.mock-civica-mark {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #1769aa;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.mock-civica-word {
+  font-size: 36px;
+  font-weight: 400;
+
+  color: #313131;
+}
+
+.mock-civica-word strong {
+  margin-left: 3px;
+
+  color: #1769aa;
+}
+
+.mock-civica-spid {
+  margin-left: 3px;
+
+  padding: 3px 6px;
+
+  border-radius: 3px;
+
+  background: #1769aa;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .spid-main-button {
+    height: 72px;
+
+    font-size: 27px;
+  }
+
+  .spid-person-icon {
+    width: 100px;
+  }
+
+  .spid-person-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .spid-main-button > span {
+    padding-left: 20px;
+  }
+
+  .spid-provider-row {
+    height: 88px;
+  }
+
+  .spid-provider-image {
+    max-height: 65px;
+  }
+
+}
+/* =========================================================
+   FAKE SPID PROVIDERS - UC09
+   ========================================================= */
+
+.fake-spid-logo {
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* Testo comune */
+
+.fake-provider-word {
+  font-size: 31px;
+  font-weight: 400;
+
+  color: #303030;
+}
+
+.fake-provider-word strong {
+  margin-left: 2px;
+
+  font-weight: 700;
+}
+
+.fake-provider-spid {
+  margin-left: 5px;
+
+  padding: 3px 6px;
+
+  border-radius: 3px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CIVICA ID
+   ========================================================= */
+
+.fake-civica-mark {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #1769aa;
+
+  color: white;
+
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.fake-civica-logo .fake-provider-word strong {
+  color: #1769aa;
+}
+
+.fake-civica-logo .fake-provider-spid {
+  background: #1769aa;
+}
+
+
+/* =========================================================
+   TRENTINO ID
+   ========================================================= */
+
+.fake-trentino-mark {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #177c78;
+
+  color: white;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.fake-trentino-logo .fake-provider-word {
+  color: #29484d;
+}
+
+.fake-trentino-logo .fake-provider-word strong {
+  color: #177c78;
+}
+
+.fake-trentino-logo .fake-provider-spid {
+  background: #177c78;
+}
+
+
+/* =========================================================
+   ITALIA CONNECT ID
+   ========================================================= */
+
+.fake-italiaconnect-mark {
+  width: 60px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px 6px 25px 6px;
+
+  background: #245ca8;
+
+  color: white;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.fake-italiaconnect-logo .fake-provider-word {
+  color: #272c4e;
+
+  font-size: 28px;
+}
+
+.fake-italiaconnect-logo .fake-provider-word strong {
+  color: #245ca8;
+}
+
+.fake-italiaconnect-logo .fake-provider-spid {
+  background: #245ca8;
+}
+/* =========================================================
+   UC08 - SCHOOL CONTEXT / CLASSROOM LOGIN
+   ========================================================= */
+
+.uc08-flow {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   Browser
+   ========================================================= */
+
+.uc08-browser {
+  overflow: hidden;
+
+  border: 1px solid #d9dde3;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    0 18px 45px rgba(0, 0, 0, 0.07);
+}
+
+
+.uc08-browser-toolbar {
+  position: relative;
+
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 18px;
+
+  background: #eef1f5;
+
+  border-bottom: 1px solid #d8dde5;
+}
+
+
+.uc08-browser-controls {
+  position: absolute;
+
+  display: flex;
+  gap: 7px;
+}
+
+
+.uc08-browser-controls span {
+  width: 10px;
+  height: 10px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #aab3bf;
+}
+
+
+.uc08-browser-address {
+  width: 78%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 9px 16px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  color: #5f6368;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+
+.uc08-browser-address strong {
+  color: #202124;
+
+  font-weight: 600;
+}
+
+
+.uc08-lock {
+  margin-right: 3px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   Google page
+   ========================================================= */
+
+.uc08-page {
+  min-height: 650px;
+
+  padding: 55px 20px 30px;
+
+  background: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.uc08-login-card {
+  width: 450px;
+  max-width: calc(100% - 30px);
+
+  margin: 0 auto;
+
+  padding: 45px 40px 36px;
+
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   Google logo
+   ========================================================= */
+
+.uc08-google-logo {
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  font-size: 26px;
+  font-weight: 600;
+
+  letter-spacing: -2px;
+}
+
+
+.uc08-google-g {
+  color: #4285f4;
+}
+
+.uc08-google-o1 {
+  color: #ea4335;
+}
+
+.uc08-google-o2 {
+  color: #fbbc05;
+}
+
+.uc08-google-g2 {
+  color: #4285f4;
+}
+
+.uc08-google-l {
+  color: #34a853;
+}
+
+.uc08-google-e {
+  color: #ea4335;
+}
+
+
+/* =========================================================
+   Classroom
+   ========================================================= */
+
+.uc08-classroom-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: #3c4043;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.uc08-classroom-icon {
+  width: 30px;
+  height: 30px;
+
+  padding: 4px;
+
+  border-radius: 3px;
+
+  background: #25a667;
+
+  box-sizing: border-box;
+}
+
+
+.uc08-classroom-board {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+.uc08-classroom-head {
+  position: absolute;
+
+  top: 4px;
+  left: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+.uc08-classroom-body {
+  position: absolute;
+
+  top: 10px;
+  left: 50%;
+
+  width: 10px;
+  height: 5px;
+
+  transform: translateX(-50%);
+
+  border-radius: 5px 5px 2px 2px;
+
+  background: #ffffff;
+}
+
+
+.uc08-classroom-person-left,
+.uc08-classroom-person-right {
+  position: absolute;
+
+  bottom: 2px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #fbbc04;
+}
+
+
+.uc08-classroom-person-left {
+  left: 2px;
+}
+
+
+.uc08-classroom-person-right {
+  right: 2px;
+}
+
+
+/* =========================================================
+   Login content
+   ========================================================= */
+
+.uc08-login-card h1 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #202124;
+
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+.uc08-login-subtitle {
+  margin: 10px 0 32px;
+
+  text-align: center;
+
+  color: #3c4043;
+
+  font-size: 16px;
+}
+
+
+.uc08-email-field {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 15px;
+
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+
+  color: #5f6368;
+
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+
+.uc08-email-field:hover {
+  border-color: #1a73e8;
+}
+
+
+.uc08-forgot-link {
+  margin-top: 8px;
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #1a73e8;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.uc08-school-context {
+  margin: 36px 0 30px;
+
+  color: #5f6368;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.uc08-login-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.uc08-create-account {
+  padding: 9px 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #1a73e8;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.uc08-next-button {
+  padding: 10px 25px;
+
+  border: 0;
+  border-radius: 4px;
+
+  background: #1a73e8;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.uc08-next-button:hover {
+  background: #1765cc;
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.uc08-google-footer {
+  width: 450px;
+  max-width: calc(100% - 30px);
+
+  margin: 22px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #5f6368;
+
+  font-size: 12px;
+}
+
+
+.uc08-google-footer div {
+  display: flex;
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .uc08-page {
+    padding: 30px 10px;
+  }
+
+  .uc08-login-card {
+    padding: 35px 25px 30px;
+  }
+
+  .uc08-browser-address {
+    width: 70%;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+  }
+
+  .uc08-google-footer {
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: flex-start;
+  }
+
+}
+
+/* =========================================================
+   UC10 - MFA REQUEST
+   ========================================================= */
+
+.uc10-scene {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* Background service */
+
+.uc10-desktop-background {
+  position: relative;
+
+  min-height: 690px;
+
+  overflow: hidden;
+
+  border: 1px solid #dde2e8;
+  border-radius: 12px;
+
+  background: #f3f6fa;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.05),
+    0 20px 50px rgba(0, 0, 0, 0.07);
+}
+
+
+.uc10-school-header {
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 35px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e3e7ec;
+}
+
+
+.uc10-school-logo {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #1669a7;
+
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+.uc10-school-header > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.uc10-school-header strong {
+  color: #253044;
+
+  font-size: 16px;
+}
+
+
+.uc10-school-header span {
+  margin-top: 2px;
+
+  color: #7a8493;
+
+  font-size: 12px;
+}
+
+
+.uc10-school-content {
+  padding: 42px 55px;
+}
+
+
+.uc10-school-content h2 {
+  margin: 0 0 8px;
+
+  color: #293448;
+
+  font-size: 25px;
+}
+
+
+.uc10-school-content p {
+  color: #6d7786;
+}
+
+
+.uc10-placeholder-grid {
+  width: 55%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 35px;
+}
+
+
+.uc10-placeholder-grid div {
+  height: 120px;
+
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   Phone
+   ========================================================= */
+
+.uc10-phone {
+  position: absolute;
+
+  top: 34px;
+  right: 85px;
+
+  width: 330px;
+
+  padding: 11px;
+
+  border-radius: 42px;
+
+  background: #17191d;
+
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.28),
+    0 3px 8px rgba(0, 0, 0, 0.16);
+}
+
+
+.uc10-phone-speaker {
+  position: absolute;
+
+  z-index: 4;
+
+  top: 17px;
+  left: 50%;
+
+  width: 88px;
+  height: 22px;
+
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+
+  background: #17191d;
+}
+
+
+.uc10-phone-screen {
+  min-height: 610px;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  background: #ffffff;
+}
+
+
+/* Status bar */
+
+.uc10-status-bar {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  background: #ffffff;
+
+  color: #161616;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* Authenticator header */
+
+.uc10-auth-header {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px 20px;
+
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #e9e9e9;
+
+  background: #fafafa;
+}
+
+
+.uc10-auth-header > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.uc10-auth-header strong {
+  color: #252525;
+
+  font-size: 14px;
+}
+
+
+.uc10-auth-header > div:last-child > span {
+  margin-top: 2px;
+  color: #7c7c7c;
+  font-size: 11px;
+}
+
+
+/* Microsoft logo */
+
+.uc10-ms-logo {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 2px;
+}
+
+
+.uc10-ms-logo span:nth-child(1) {
+  background: #f35325;
+}
+
+.uc10-ms-logo span:nth-child(2) {
+  background: #81bc06;
+}
+
+.uc10-ms-logo span:nth-child(3) {
+  background: #05a6f0;
+}
+
+.uc10-ms-logo span:nth-child(4) {
+  background: #ffba08;
+}
+
+
+/* =========================================================
+   MFA content
+   ========================================================= */
+
+.uc10-auth-content {
+  padding: 27px 25px 22px;
+
+  text-align: center;
+}
+
+
+.uc10-shield {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9f3ff;
+
+  color: #1267b1;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+.uc10-auth-content h2 {
+  margin: 0;
+
+  color: #1f1f1f;
+
+  font-size: 21px;
+  font-weight: 600;
+}
+
+
+.uc10-account {
+  margin: 7px 0 22px;
+
+  color: #616161;
+
+  font-size: 13px;
+}
+
+
+/* Details */
+
+.uc10-login-details {
+  margin-bottom: 22px;
+
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+
+  text-align: left;
+}
+
+
+.uc10-login-details div {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px 2px;
+
+  border-bottom: 1px solid #f1f1f1;
+}
+
+
+.uc10-login-details div:last-child {
+  border-bottom: 0;
+}
+
+
+.uc10-login-details span {
+  color: #777777;
+
+  font-size: 11px;
+}
+
+
+.uc10-login-details strong {
+  color: #333333;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+.uc10-question {
+  margin: 18px 0 14px;
+
+  color: #333333;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* Buttons */
+
+.uc10-approve-button,
+.uc10-deny-button {
+  width: 100%;
+
+  padding: 11px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.uc10-approve-button {
+  border: 1px solid #0067b8;
+
+  background: #0067b8;
+
+  color: #ffffff;
+}
+
+
+.uc10-deny-button {
+  margin-top: 9px;
+
+  border: 1px solid #8a8a8a;
+
+  background: #ffffff;
+
+  color: #333333;
+}
+
+
+.uc10-help {
+  margin: 17px 5px 0;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .uc10-desktop-background {
+    padding-bottom: 30px;
+  }
+
+  .uc10-phone {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 310px;
+    max-width: calc(100% - 35px);
+
+    margin: 30px auto;
+  }
+
+  .uc10-placeholder-grid {
+    width: 100%;
+  }
+
+}
+.uc10-school-service {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  background: white;
+}
+
+.uc10-school-service > * {
+  min-height: 100%;
+}
+
+.uc10-phone {
+  position: absolute;
+  z-index: 20;
+
+  top: 34px;
+  right: 85px;
+}
+.uc10-google-logo {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.uc10-google-g {
+  font-family: Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+
+  background: conic-gradient(
+    from -45deg,
+    #4285f4 0deg 90deg,
+    #34a853 90deg 180deg,
+    #fbbc05 180deg 270deg,
+    #ea4335 270deg 360deg
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

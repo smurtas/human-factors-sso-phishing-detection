@@ -4,14 +4,23 @@ import { MfaMockup } from "./MfaMockup";
 import EmailScenarioContainer from "./EmailScenarioContainer";
 import { SamlMockup } from "./SamlMockup";
 import { GoogleUpdatedLoginMockup } from "./GoogleUpdatedLoginMockup";
-import { ProviderSelectionMockup } from "./ProviderSelectionMockup";
-
+import { UC09Scenario } from "./UC09Scenario";
+import { UC06Scenario } from "./UC06Scenario";
+import { OAuthConsentMockup } from "./OAuthConsentMockup";
+import canvaLogo from "../assets/logo-canva.png";
+import padletLogo from "../assets/logo-padlet.png";
+import { UC08Scenario } from "./UC08Scenario";
+import { UC10Scenario } from "./UC10Scenario";
+import { UC04Scenario } from "./UC04Scenario";
 interface ScenarioVisualProps {
   scenario: Scenario;
+  onEvaluate?: () => void;
+
 }
 
 export function ScenarioVisual({
   scenario,
+  onEvaluate,
 }: ScenarioVisualProps) {
   if (scenario.category === "email") {
     return <EmailScenarioContainer scenarioId={scenario.id} />;
@@ -19,58 +28,38 @@ export function ScenarioVisual({
   switch (scenario.id) {
     case "UC03":
       return (
-        <BrowserMockup
-          domain="accounts.google.com"
-          secure
-          provider="google"
+        <OAuthConsentMockup
+          appName="Kahoot"
+          accountEmail="studente@scuola.it"
         />
       );
     case "UC04":
       return (
         <SamlMockup
-          serviceDomain="registro.scuola.it"
-          identityProvider="idp.scuola.it"
-          serviceName="Registro elettronico"
-          email="nome.cognome@scuola.it"
-          role="Studente"
-          secure
+          includeFakeProvider={false}
         />
       );
     case "UC05":
       return <GoogleUpdatedLoginMockup />;
-    case "UC08":
+    case "UC06":
       return (
-        <BrowserMockup
-          domain="accounts-google-auth.com"
-          secure={false}
-          provider="google"
+        <UC06Scenario
+          onEvaluate={
+            onEvaluate ?? (() => { })
+          }
         />
       );
+    case "UC08":
+      return <UC08Scenario />;
     case "UC09":
       return (
-        <ProviderSelectionMockup
-          serviceName="Servizi online della scuola"
-          serviceDomain="servizi.scuola.it"
-          selectedProvider="PosteID"
-          providers={[
-            {
-              name: "Aruba ID",
-              domain: "login.aruba.it",
-            },
-            {
-              name: "InfoCert ID",
-              domain: "identity.infocert.it",
-            },
-            {
-              name: "PosteID",
-              domain: "poste-id-accesso.com",
-            },
-          ]}
+        <SamlMockup
+          includeFakeProvider={true}
+          onEvaluate={onEvaluate}
         />
       );
-
     case "UC10":
-      return <MfaMockup />;
+      return <UC10Scenario />;
 
 
     case "UC11":
@@ -89,10 +78,74 @@ export function ScenarioVisual({
           provider="google"
         />
       );
+    case "UC14":
+      return (
+        <OAuthConsentMockup
+          appName="Canva"
+          appLogo={canvaLogo}
+          accountName="Studente"
+          accountEmail="studente@scuola.it"
+          permissions={[
+            {
+              icon: "profile",
+              title: "Studente",
+              description: "Nome e immagine del profilo",
+            },
+            {
+              icon: "email",
+              title: "studente@scuola.it",
+              description: "Indirizzo email",
+            },
+            {
+              icon: "email",
+              title: "Gmail",
+              description:
+                "Leggere, cercare e visualizzare tutti i messaggi email del tuo account Gmail",
+            },
+          ]}
+        />
+      );
+    case "UC16":
+      return (
+        <OAuthConsentMockup
+          appName="Padlet"
+          appLogo={padletLogo}
+          accountName="Studente"
+          accountEmail="studente@scuola.it"
+          permissions={[
+            {
+              icon: "profile",
+              title: "Studente",
+              description: "Nome e immagine del profilo",
+            },
+            /*
+            {
+              icon: "email",
+              title: "studente@scuola.it",
+              description: "Indirizzo email",
+            },
+            */
+            {
+              icon: "drive",
+              title: "Google Drive",
+              description:
+                "Visualizzare, modificare, creare ed eliminare tutti i tuoi file di Google Drive",
+            },
+            {
+              icon: "calendar",
+              title: "Google Calendar",
+              description:
+                "Visualizzare, modificare, creare ed eliminare tutti gli eventi dei tuoi calendari",
+            },
+          ]}
+        />
+      );
+
+
     default:
       return (
         <div className="scenario-placeholder">
-          <p>{scenario.instruction}</p>
+          <p>Scenario non ancora implementato.</p>
         </div>
       );
   }
