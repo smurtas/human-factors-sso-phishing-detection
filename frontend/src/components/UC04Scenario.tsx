@@ -1,4 +1,4 @@
-import { SamlMockup } from "./SamlMockUp";
+import { SamlMockup } from "./SamlMockup";
 
 export function UC04Scenario() {
   return (

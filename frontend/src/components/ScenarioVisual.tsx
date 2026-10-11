@@ -1,8 +1,8 @@
 import type { Scenario } from "../data/scenarioTypes";
 import { BrowserMockup } from "./BrowserMockup";
-import { MfaMockup } from "./MfaMockup";
+//import { MfaMockup } from "./MfaMockup";
 import EmailScenarioContainer from "./EmailScenarioContainer";
-import { SamlMockup } from "./SamlMockup";
+//import { SamlMockup } from "./SamlMockup";
 import { GoogleUpdatedLoginMockup } from "./GoogleUpdatedLoginMockup";
 import { UC09Scenario } from "./UC09Scenario";
 import { UC06Scenario } from "./UC06Scenario";
@@ -33,12 +33,8 @@ export function ScenarioVisual({
           accountEmail="studente@scuola.it"
         />
       );
-    case "UC04":
-      return (
-        <SamlMockup
-          includeFakeProvider={false}
-        />
-      );
+case "UC04":
+  return <UC04Scenario />;
     case "UC05":
       return <GoogleUpdatedLoginMockup />;
     case "UC06":
@@ -51,13 +47,9 @@ export function ScenarioVisual({
       );
     case "UC08":
       return <UC08Scenario />;
-    case "UC09":
-      return (
-        <SamlMockup
-          includeFakeProvider={true}
-          onEvaluate={onEvaluate}
-        />
-      );
+case "UC09":
+  return <UC09Scenario onEvaluate={onEvaluate} />;
+
     case "UC10":
       return <UC10Scenario />;
 
