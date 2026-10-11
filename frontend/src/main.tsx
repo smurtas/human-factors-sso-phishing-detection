@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+/*import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 import App from "./App";
@@ -15,5 +15,26 @@ createRoot(root).render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+  </StrictMode>,
+);
+
+*/
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { HashRouter } from "react-router";
+import App from "./App";
+import "./index.css";
+
+const root = document.getElementById("root");
+
+if (!root) {
+  throw new Error("Elemento root non trovato.");
+}
+
+createRoot(root).render(
+  <StrictMode>
+    <HashRouter>
+      <App />
+    </HashRouter>
   </StrictMode>,
 );
