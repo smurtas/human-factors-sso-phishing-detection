@@ -9,7 +9,12 @@ export function AppLayout({ children }: AppLayoutProps) {
     <div className="app-shell">
       <header className="site-header">
         <div className="site-header__inner">
-          <span className="site-title">SSO Phishing Lab</span>
+          /*<span className="site-title">SSO Phishing Lab</span>*/
+          <img
+            className="site-logo"
+            src={`${import.meta.env.BASE_URL}sso-logo.png`}
+            alt="SSO Phishing Lab"
+          />
           <span className="site-subtitle">
             Studio sull'autenticazione federata
           </span>
