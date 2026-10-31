@@ -115,9 +115,6 @@ export function ExperimentPage() {
       (scenario) => scenario.id === "UC01",
     );
 
-    const uc02 = pilotScenarios.find(
-      (scenario) => scenario.id === "UC02",
-    );
 
     /* ---------------------------------------------------------
        UC07 approximately in the middle
