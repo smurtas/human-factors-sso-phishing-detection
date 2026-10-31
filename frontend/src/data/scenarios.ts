@@ -17,20 +17,18 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  /*
-  {
-    id: "UC02",
-    category: "baseline",
-    protocol: "OIDC",
-    title: "Flusso di accesso Microsoft corretto",
-    instruction:
-      'Accedi alla piattaforma scolastica tramite il pulsante "Accedi con Microsoft" e valuta il flusso completato.',
-    expectedAnswer: "legitimate",
-    difficultyLevel: 1,
-    type: "full-flow",
-    steps: [],
-  },
-  */
+{
+  id: "UC02",
+  category: "baseline",
+  protocol: "OIDC",
+  title: "Accesso a Microsoft 365",
+  instruction:
+    "Accedi a Microsoft 365 utilizzando il tuo account e valuta il flusso di autenticazione mostrato.",
+  expectedAnswer: "legitimate",
+  difficultyLevel: 1,
+  type: "full-flow",
+  steps: [],
+},
   {
     id: "UC03",
     category: "baseline",

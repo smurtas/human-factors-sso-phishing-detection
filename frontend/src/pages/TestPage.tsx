@@ -1,13 +1,32 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { ScenarioVisual } from "../components/ScenarioVisual";
 import { pilotScenarios } from "../data/scenarios";
 
 export function TestPage() {
   const { scenarioId } = useParams();
+  const navigate = useNavigate();
 
   const scenario = pilotScenarios.find(
     (item) => item.id === scenarioId,
   );
+
+  function handleStartUC02MicrosoftFlow() {
+    sessionStorage.setItem(
+      "microsoftFlowScenarioId",
+      "UC02"
+    );
+
+    sessionStorage.setItem(
+      "microsoftFlowReturnTo",
+      "/test/UC02"
+    );
+
+    sessionStorage.removeItem(
+      "completedFlowScenarioId"
+    );
+
+    navigate("/microsoft-login");
+  }
 
   if (!scenario) {
     return (
@@ -30,7 +49,14 @@ export function TestPage() {
       </div>
 
       <div className="scenario-full-bleed">
-        <ScenarioVisual scenario={scenario} />
+        <ScenarioVisual
+          scenario={scenario}
+          onStartMicrosoftFlow={
+            scenario.id === "UC02"
+              ? handleStartUC02MicrosoftFlow
+              : undefined
+          }
+        />
       </div>
     </main>
   );

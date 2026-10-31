@@ -5949,3 +5949,667 @@
   width: auto;
   display: block;
 }
+
+/* =========================================================
+   UC02 - LEGITIMATE MICROSOFT SSO BASELINE
+   ========================================================= */
+
+.uc02-service {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d9dee7;
+  border-radius: 14px;
+  background: #f5f7fa;
+  box-shadow: 0 8px 28px rgba(20, 33, 61, 0.08);
+}
+
+.uc02-service-header {
+  min-height: 70px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.uc02-service-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.uc02-service-brand > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.uc02-service-brand strong {
+  color: #172033;
+  font-size: 16px;
+}
+
+.uc02-service-brand span {
+  margin-top: 2px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.uc02-service-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #365f91;
+  color: white;
+  font-weight: 700;
+}
+
+.uc02-login-content {
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+}
+
+.uc02-login-panel {
+  width: min(420px, 100%);
+  padding: 38px;
+  text-align: center;
+  border: 1px solid #e0e4ea;
+  border-radius: 14px;
+  background: white;
+}
+
+.uc02-calendar-icon {
+  margin-bottom: 18px;
+  font-size: 42px;
+}
+
+.uc02-login-panel h2 {
+  margin: 0 0 12px;
+  color: #172033;
+  font-size: 25px;
+}
+
+.uc02-login-panel p {
+  margin: 0 auto 28px;
+  color: #576175;
+  line-height: 1.6;
+}
+
+.uc02-microsoft-button {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+
+  background: #ffffff;
+  color: #1b1b1b;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.uc02-microsoft-button:hover {
+  background: #f5f5f5;
+}
+
+.uc02-ms-logo {
+  width: 18px;
+  height: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 2px;
+}
+
+.uc02-ms-logo i:nth-child(1) {
+  background: #f25022;
+}
+
+.uc02-ms-logo i:nth-child(2) {
+  background: #7fba00;
+}
+
+.uc02-ms-logo i:nth-child(3) {
+  background: #00a4ef;
+}
+
+.uc02-ms-logo i:nth-child(4) {
+  background: #ffb900;
+}
+
+.uc02-login-panel small {
+  display: block;
+  margin-top: 18px;
+  color: #7a8496;
+}
+
+/* Pagina raggiunta dopo il login */
+
+.uc02-user {
+  color: #475467;
+  font-size: 13px;
+}
+
+.uc02-dashboard {
+  min-height: 430px;
+  padding: 38px;
+}
+
+.uc02-dashboard-heading h2 {
+  margin: 12px 0 6px;
+}
+
+.uc02-dashboard-heading p {
+  color: #667085;
+}
+
+.uc02-badge {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+  background: #ecfdf3;
+
+  color: #027a48;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+
+.uc02-teacher-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.uc02-teacher-card span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.uc02-teacher-card button {
+  padding: 9px 14px;
+
+  border: 1px solid #365f91;
+  border-radius: 6px;
+
+  background: white;
+  color: #365f91;
+
+  cursor: pointer;
+}
+//* =========================================================
+   UC02 — LEGITIMATE MICROSOFT 365 SSO BASELINE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Main container
+   --------------------------------------------------------- */
+
+.uc02-m365 {
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid #dedede;
+  border-radius: 12px;
+
+  background: #f7f7f7;
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+
+.uc02-m365-header {
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 26px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+.uc02-m365-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #242424;
+
+  font-size: 16px;
+}
+
+
+.uc02-m365-user {
+  color: #555555;
+
+  font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   Microsoft logo
+   --------------------------------------------------------- */
+
+.uc02-m365-logo {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 2px;
+}
+
+
+.uc02-m365-logo i {
+  display: block;
+}
+
+
+.uc02-m365-logo i:nth-child(1) {
+  background: #f25022;
+}
+
+
+.uc02-m365-logo i:nth-child(2) {
+  background: #7fba00;
+}
+
+
+.uc02-m365-logo i:nth-child(3) {
+  background: #00a4ef;
+}
+
+
+.uc02-m365-logo i:nth-child(4) {
+  background: #ffb900;
+}
+
+
+/* ---------------------------------------------------------
+   Initial unauthenticated state
+   --------------------------------------------------------- */
+
+.uc02-m365-login {
+  min-height: 440px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 1fr)
+    minmax(300px, 1fr);
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 54px 50px;
+
+  background: #ffffff;
+}
+
+
+.uc02-m365-intro {
+  max-width: 450px;
+}
+
+
+.uc02-m365-large-logo {
+  margin-bottom: 28px;
+}
+
+
+.uc02-m365-large-logo .uc02-m365-logo {
+  width: 42px;
+  height: 42px;
+
+  gap: 3px;
+}
+
+
+.uc02-m365-intro h2 {
+  margin: 0 0 16px;
+
+  color: #242424;
+
+  font-size: 36px;
+  font-weight: 600;
+}
+
+
+.uc02-m365-intro p {
+  max-width: 420px;
+
+  margin: 0 0 30px;
+
+  color: #555555;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   Sign-in button
+   --------------------------------------------------------- */
+
+.uc02-m365-login-button {
+  min-width: 120px;
+
+  padding: 11px 24px;
+
+  border: 0;
+  border-radius: 3px;
+
+  background: #0067b8;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.uc02-m365-login-button:hover {
+  background: #005da6;
+}
+
+
+.uc02-m365-login-button:focus-visible {
+  outline: 3px solid rgba(0, 103, 184, 0.3);
+  outline-offset: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   Application preview
+   --------------------------------------------------------- */
+
+.uc02-m365-preview {
+  padding: 28px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+
+  background: #fafafa;
+}
+
+
+.uc02-preview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(100px, 1fr));
+
+  gap: 16px;
+}
+
+
+.uc02-preview-grid > div {
+  min-height: 105px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 18px;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #444444;
+
+  font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   Microsoft application icons
+   --------------------------------------------------------- */
+
+/*
+ * All application logos use the same visual container.
+ * Individual scaling compensates for transparent margins
+ * contained in the source PNG assets.
+ */
+
+.uc02-app-logo-box {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+.uc02-app-logo {
+  display: block;
+
+  width: 46px;
+  height: 46px;
+
+  object-fit: contain;
+}
+
+
+/* Word already fills most of its source image canvas. */
+
+.uc02-app-logo--word {
+  transform: scale(1);
+}
+
+
+/* PowerPoint contains larger transparent margins. */
+
+.uc02-app-logo--powerpoint {
+  transform: scale(1.45);
+}
+
+
+/* Excel requires visual compensation to match Word. */
+
+.uc02-app-logo--excel {
+  transform: scale(1.4);
+}
+
+
+/* Outlook requires visual compensation to match Word. */
+
+.uc02-app-logo--outlook {
+  transform: scale(1.4);
+}
+
+
+/* OneDrive can be tuned independently if necessary. */
+
+.uc02-app-logo--onedrive {
+  transform: scale(1.2);
+}
+
+
+/* ---------------------------------------------------------
+   Post-authentication state
+   --------------------------------------------------------- */
+
+.uc02-m365-home {
+  min-height: 440px;
+
+  padding: 42px;
+
+  background: #f7f7f7;
+}
+
+
+.uc02-m365-welcome {
+  margin-bottom: 32px;
+}
+
+
+.uc02-m365-status {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #e8f5e9;
+  color: #107c10;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+.uc02-m365-welcome h2 {
+  margin: 14px 0 8px;
+
+  color: #242424;
+
+  font-size: 28px;
+}
+
+
+.uc02-m365-welcome p {
+  margin: 0;
+
+  color: #555555;
+}
+
+
+/* ---------------------------------------------------------
+   Application grid after authentication
+   --------------------------------------------------------- */
+
+.uc02-m365-apps {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(100px, 1fr));
+
+  gap: 14px;
+}
+
+
+.uc02-m365-app-card {
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 18px;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #444444;
+
+  font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   Responsive layout
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .uc02-m365-login {
+    gap: 40px;
+
+    padding: 44px 32px;
+  }
+
+
+  .uc02-m365-apps {
+    grid-template-columns:
+      repeat(3, minmax(100px, 1fr));
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  .uc02-m365-login {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 36px 24px;
+  }
+
+
+  .uc02-m365-preview {
+    padding: 20px;
+  }
+
+
+  .uc02-m365-home {
+    padding: 30px 22px;
+  }
+
+
+  .uc02-m365-apps {
+    grid-template-columns:
+      repeat(2, minmax(100px, 1fr));
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .uc02-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .uc02-m365-apps {
+    grid-template-columns: 1fr;
+  }
+
+}

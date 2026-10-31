@@ -22,6 +22,7 @@ import type {
   ScenarioResponse,
 } from "../data/scenarioTypes";
 
+import { UC02Scenario } from "../components/UC02Scenario";
 
 const STORAGE_KEY = "pilotScenarioResponses";
 const SCENARIO_ORDER_KEY = "pilotScenarioOrder";
@@ -114,6 +115,9 @@ export function ExperimentPage() {
       (scenario) => scenario.id === "UC01",
     );
 
+    const uc02 = pilotScenarios.find(
+      (scenario) => scenario.id === "UC02",
+    );
 
     /* ---------------------------------------------------------
        UC07 approximately in the middle
@@ -396,24 +400,25 @@ export function ExperimentPage() {
      START MICROSOFT FLOW - UC07
      ========================================================= */
 
-  function handleStartMicrosoftFlow() {
+  function handleStartMicrosoftFlow(
+    scenarioId: "UC02" | "UC07"
+  ) {
+    // Store which scenario started the Microsoft login flow.
+    sessionStorage.setItem(
+      "microsoftFlowScenarioId",
+      scenarioId
+    );
 
-    /*
-     * Save current scenario because
-     * Microsoft authentication uses
-     * separate routes.
-     */
-
+    // Preserve the current experiment position.
     sessionStorage.setItem(
       CURRENT_INDEX_KEY,
-      String(currentIndex),
+      String(currentIndex)
     );
 
-
+    // The authentication flow has not been completed yet.
     sessionStorage.removeItem(
-      "completedFlowScenarioId",
+      "completedFlowScenarioId"
     );
-
 
     navigate("/microsoft-login");
   }
@@ -627,13 +632,20 @@ export function ExperimentPage() {
             <span>
               Google Classroom
             </span>
-            
+
 
           </div>
 
         </div>
-        
 
+
+
+      ) : currentScenario.id === "UC02" ? (
+
+        <UC02Scenario
+          completed={completedFlowScenarioId === "UC02"}
+          onStart={() => handleStartMicrosoftFlow("UC02")}
+        />
 
       ) : currentScenario.id === "UC07" &&
         completedFlowScenarioId !== "UC07" ? (
@@ -674,9 +686,7 @@ export function ExperimentPage() {
               <button
                 type="button"
                 className="teams-login-access-button"
-                onClick={
-                  handleStartMicrosoftFlow
-                }
+                onClick={() => handleStartMicrosoftFlow("UC07")}
               >
                 Accedi
               </button>
@@ -766,6 +776,11 @@ export function ExperimentPage() {
             scenario={currentScenario}
             onEvaluate={() =>
               setShowEvaluation(true)
+            }
+            onStartMicrosoftFlow={
+              currentScenario.id === "UC02"
+                ? () => handleStartMicrosoftFlow("UC02")
+                : undefined
             }
           />
         </div>

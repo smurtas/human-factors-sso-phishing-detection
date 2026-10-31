@@ -4,28 +4,53 @@ import { BrowserMockup } from "./BrowserMockup";
 import EmailScenarioContainer from "./EmailScenarioContainer";
 //import { SamlMockup } from "./SamlMockup";
 import { GoogleUpdatedLoginMockup } from "./GoogleUpdatedLoginMockup";
-import { UC09Scenario } from "./UC09Scenario";
-import { UC06Scenario } from "./UC06Scenario";
+
 import { OAuthConsentMockup } from "./OAuthConsentMockup";
 import canvaLogo from "../assets/logo-canva.png";
 import padletLogo from "../assets/logo-padlet.png";
+import { UC02Scenario } from "./UC02Scenario";
+import { UC06Scenario } from "./UC06Scenario";
 import { UC08Scenario } from "./UC08Scenario";
+import { UC09Scenario } from "./UC09Scenario";
 import { UC10Scenario } from "./UC10Scenario";
 import { UC04Scenario } from "./UC04Scenario";
 interface ScenarioVisualProps {
   scenario: Scenario;
+
+  /**
+   * Used by scenarios that need to notify the parent
+   * when their internal interaction is complete.
+   */
   onEvaluate?: () => void;
 
+  /**
+   * Used by UC02 to start the Microsoft authentication flow.
+   */
+  onStartMicrosoftFlow?: () => void;
 }
 
 export function ScenarioVisual({
   scenario,
   onEvaluate,
+  onStartMicrosoftFlow,
 }: ScenarioVisualProps) {
   if (scenario.category === "email") {
     return <EmailScenarioContainer scenarioId={scenario.id} />;
   }
   switch (scenario.id) {
+case "UC02":
+  return (
+    <UC02Scenario
+      completed={
+        sessionStorage.getItem(
+          "completedFlowScenarioId",
+        ) === "UC02"
+      }
+      onStart={() => {
+        onStartMicrosoftFlow?.();
+      }}
+    />
+  );
     case "UC03":
       return (
         <OAuthConsentMockup
@@ -33,8 +58,8 @@ export function ScenarioVisual({
           accountEmail="studente@scuola.it"
         />
       );
-case "UC04":
-  return <UC04Scenario />;
+    case "UC04":
+      return <UC04Scenario />;
     case "UC05":
       return <GoogleUpdatedLoginMockup />;
     case "UC06":
@@ -47,8 +72,8 @@ case "UC04":
       );
     case "UC08":
       return <UC08Scenario />;
-case "UC09":
-  return <UC09Scenario onEvaluate={onEvaluate} />;
+    case "UC09":
+      return <UC09Scenario onEvaluate={onEvaluate} />;
 
     case "UC10":
       return <UC10Scenario />;

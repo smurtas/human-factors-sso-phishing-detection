@@ -16,7 +16,7 @@ export function AppLayout({ children }: AppLayoutProps) {
             alt="SSO Phishing Lab"
           />
           <span className="site-subtitle">
-            Studio sull'autenticazione federata
+            Studio sull'Identità federata
           </span>
         </div>
       </header>
