@@ -17,18 +17,18 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-{
-  id: "UC02",
-  category: "baseline",
-  protocol: "OIDC",
-  title: "Accesso a Microsoft 365",
-  instruction:
-    "Accedi a Microsoft 365 utilizzando il tuo account e valuta il flusso di autenticazione mostrato.",
-  expectedAnswer: "legitimate",
-  difficultyLevel: 1,
-  type: "full-flow",
-  steps: [],
-},
+  {
+    id: "UC02",
+    category: "baseline",
+    protocol: "OIDC",
+    title: "Accesso a Microsoft 365",
+    instruction:
+      "Accedi a Microsoft 365 utilizzando il tuo account e valuta il flusso di autenticazione mostrato.",
+    expectedAnswer: "legitimate",
+    difficultyLevel: 1,
+    type: "full-flow",
+    steps: [],
+  },
   {
     id: "UC03",
     category: "baseline",
@@ -162,8 +162,6 @@ export const pilotScenarios: Scenario[] = [
     type: "single-page",
     steps: [],
   },
-  /*
-
 
 
   // =========================================================
@@ -174,7 +172,7 @@ export const pilotScenarios: Scenario[] = [
     id: "UC13",
     category: "oauth_consent",
     protocol: "OAuth",
-    title: "Consenso OAuth coerente",
+   title: "Autorizzazione Kahoot",
     instruction:
       "Valuta le autorizzazioni richieste dall'applicazione Classroom Planner.",
     expectedAnswer: "legitimate",
@@ -182,7 +180,7 @@ export const pilotScenarios: Scenario[] = [
     type: "full-flow",
     steps: [],
   },
-  */
+
   {
     id: "UC14",
     category: "oauth_consent",
@@ -195,20 +193,20 @@ export const pilotScenarios: Scenario[] = [
     type: "single-page",
     steps: [],
   },
-  /*
-    {
-      id: "UC15",
-      category: "oauth_consent",
-      protocol: "OAuth",
-      title: "Invio di email a nome dell'utente",
-      instruction:
-        "Valuta le autorizzazioni richieste dall'applicazione Homework Assistant.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-    */
+
+  {
+    id: "UC15",
+    category: "oauth_consent",
+    protocol: "OAuth",
+    title: "Autorizzazione Kahoot!",
+    instruction:
+      "Valuta le autorizzazioni richieste da Kahoot! durante l'accesso con Google.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+
   {
     id: "UC16",
     category: "oauth_consent",
@@ -222,268 +220,269 @@ export const pilotScenarios: Scenario[] = [
     steps: [],
   },
 
+
+  {
+    id: "UC17",
+    category: "oauth_consent",
+    protocol: "OAuth",
+    title: "Autorizzazione a Padlet",
+    instruction:
+      "Valuta le autorizzazioni richieste da Kahoot! durante l'accesso con Google.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
   /*
-    {
-      id: "UC17",
-      category: "oauth_consent",
-      protocol: "OAuth",
-      title: "Accesso permanente ai dati",
-      instruction:
-        "Valuta la richiesta di accesso ai dati anche quando l'applicazione non è utilizzata.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC18",
-      category: "oauth_consent",
-      protocol: "OAuth",
-      title: "Publisher sconosciuto",
-      instruction:
-        "Valuta la richiesta di autorizzazione di School Calendar Sync e le informazioni sul publisher.",
-      expectedAnswer: "suspicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC19",
-      category: "oauth_consent",
-      protocol: "OAuth",
-      title: "Impersonificazione del brand Microsoft",
-      instruction:
-        "Valuta l'applicazione Microsoft School Sync, il publisher e i permessi richiesti.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-  
-    // =========================================================
-    // REDIRECT MANIPULATION — UC20-UC25
-    // =========================================================
-  
-    {
-      id: "UC20",
-      category: "redirect",
-      protocol: "OIDC",
-      title: "Redirect Microsoft corretto",
-      instruction:
-        "Segui il flusso di autenticazione tra Microsoft Teams e Microsoft e valuta i domini attraversati.",
-      expectedAnswer: "legitimate",
-      difficultyLevel: 2,
-      type: "full-flow",
-      steps: [],
-    },
-    {
-      id: "UC21",
-      category: "redirect",
-      protocol: "OIDC",
-      title: "Dominio intermedio inatteso",
-      instruction:
-        "Segui il flusso di autenticazione e valuta la presenza di un dominio intermedio.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "full-flow",
-      steps: [],
-    },
-    {
-      id: "UC22",
-      category: "redirect",
-      protocol: "OAuth",
-      title: "Open redirect",
-      instruction:
-        "Apri il collegamento proveniente dal portale scolastico e valuta la destinazione finale.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "full-flow",
-      steps: [],
-    },
-    {
-      id: "UC23",
-      category: "redirect",
-      protocol: "OIDC",
-      title: "Redirect URI anomala",
-      instruction:
-        "Completa il login Microsoft e verifica il dominio sul quale termina il flusso.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "full-flow",
-      steps: [],
-    },
-    {
-      id: "UC24",
-      category: "redirect",
-      protocol: "OIDC",
-      title: "Catena di redirect lunga",
-      instruction:
-        "Osserva la sequenza dei domini attraversati durante il processo di autenticazione.",
-      expectedAnswer: "suspicious",
-      difficultyLevel: 4,
-      type: "full-flow",
-      steps: [],
-    },
-    {
-      id: "UC25",
-      category: "redirect",
-      protocol: "OAuth",
-      title: "Parametri OAuth sospetti",
-      instruction:
-        "Valuta i parametri OAuth mostrati nella barra degli indirizzi.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 4,
-      type: "single-page",
-      steps: [],
-    },
-  
-    // =========================================================
-    // OIDC PROVIDER & ENDPOINT CONFUSION — UC26-UC30
-    // =========================================================
-  
-    {
-      id: "UC26",
-      category: "oidc_confusion",
-      protocol: "OIDC",
-      title: "Provider OIDC corretti",
-      instruction:
-        "Scegli tra i provider Google e Microsoft proposti dal servizio scolastico.",
-      expectedAnswer: "legitimate",
-      difficultyLevel: 2,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC27",
-      category: "oidc_confusion",
-      protocol: "OIDC",
-      title: "Provider duplicato",
-      instruction:
-        "Valuta i due provider Classroom Login e Classroom Secure Login.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC28",
-      category: "oidc_confusion",
-      protocol: "OIDC",
-      title: "Incoerenza tra issuer e brand",
-      instruction:
-        "Valuta la schermata che mostra il logo Google ma utilizza il dominio di un provider differente.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC29",
-      category: "oidc_confusion",
-      protocol: "OIDC",
-      title: "Discovery endpoint sospetto",
-      instruction:
-        "Valuta la configurazione OIDC caricata da un endpoint non istituzionale.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 4,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC30",
-      category: "oidc_confusion",
-      protocol: "OIDC",
-      title: "Provider sconosciuto",
-      instruction:
-        "Valuta il nuovo provider EduID Connect proposto dal portale scolastico.",
-      expectedAnswer: "suspicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-  
-    // =========================================================
-    // SAML IDENTITY & ASSERTION ANOMALIES — UC31-UC36
-    // =========================================================
-  
-    {
-      id: "UC31",
-      category: "saml",
-      protocol: "SAML",
-      title: "Attributi SAML coerenti",
-      instruction:
-        "Verifica gli attributi restituiti dal sistema dopo l'accesso al servizio scolastico.",
-      expectedAnswer: "legitimate",
-      difficultyLevel: 2,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC32",
-      category: "saml",
-      protocol: "SAML",
-      title: "Ruolo amministratore inatteso",
-      instruction:
-        "Controlla il ruolo assegnato al tuo account dopo l'accesso al servizio.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC33",
-      category: "saml",
-      protocol: "SAML",
-      title: "Identità incoerente",
-      instruction:
-        "Controlla l'identità mostrata dal servizio dopo il completamento del login.",
-      expectedAnswer: "malicious",
-      difficultyLevel: 2,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC34",
-      category: "saml",
-      protocol: "SAML",
-      title: "Sessione già attiva",
-      instruction:
-        "Apri il servizio scolastico e valuta la sessione di autenticazione già presente.",
-      expectedAnswer: "suspicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-    {
-      id: "UC35",
-      category: "saml",
-      protocol: "SAML",
-      title: "Login IdP-initiated inatteso",
-      instruction:
-        "Apri il collegamento ricevuto dalla scuola e valuta l'accesso automatico al servizio.",
-      expectedAnswer: "legitimate",
-      difficultyLevel: 4,
-      type: "full-flow",
-      steps: [],
-    },
-    {
-      id: "UC36",
-      category: "saml",
-      protocol: "SAML",
-      title: "Attributi SAML mancanti",
-      instruction:
-        "Verifica la completezza delle informazioni associate alla tua identità dopo l'accesso.",
-      expectedAnswer: "suspicious",
-      difficultyLevel: 3,
-      type: "single-page",
-      steps: [],
-    },
-  
-    // =========================================================
-    // EMAIL COME VETTORE VERSO SSO PHISHING — UC37-UC40
-    // =========================================================
-  
-    */
+  {
+    id: "UC18",
+    category: "oauth_consent",
+    protocol: "OAuth",
+    title: "Publisher sconosciuto",
+    instruction:
+      "Valuta la richiesta di autorizzazione di School Calendar Sync e le informazioni sul publisher.",
+    expectedAnswer: "suspicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC19",
+    category: "oauth_consent",
+    protocol: "OAuth",
+    title: "Impersonificazione del brand Microsoft",
+    instruction:
+      "Valuta l'applicazione Microsoft School Sync, il publisher e i permessi richiesti.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+ 
+  // =========================================================
+  // REDIRECT MANIPULATION — UC20-UC25
+  // =========================================================
+ 
+  {
+    id: "UC20",
+    category: "redirect",
+    protocol: "OIDC",
+    title: "Redirect Microsoft corretto",
+    instruction:
+      "Segui il flusso di autenticazione tra Microsoft Teams e Microsoft e valuta i domini attraversati.",
+    expectedAnswer: "legitimate",
+    difficultyLevel: 2,
+    type: "full-flow",
+    steps: [],
+  },
+  {
+    id: "UC21",
+    category: "redirect",
+    protocol: "OIDC",
+    title: "Dominio intermedio inatteso",
+    instruction:
+      "Segui il flusso di autenticazione e valuta la presenza di un dominio intermedio.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "full-flow",
+    steps: [],
+  },
+  {
+    id: "UC22",
+    category: "redirect",
+    protocol: "OAuth",
+    title: "Open redirect",
+    instruction:
+      "Apri il collegamento proveniente dal portale scolastico e valuta la destinazione finale.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "full-flow",
+    steps: [],
+  },
+  {
+    id: "UC23",
+    category: "redirect",
+    protocol: "OIDC",
+    title: "Redirect URI anomala",
+    instruction:
+      "Completa il login Microsoft e verifica il dominio sul quale termina il flusso.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "full-flow",
+    steps: [],
+  },
+  {
+    id: "UC24",
+    category: "redirect",
+    protocol: "OIDC",
+    title: "Catena di redirect lunga",
+    instruction:
+      "Osserva la sequenza dei domini attraversati durante il processo di autenticazione.",
+    expectedAnswer: "suspicious",
+    difficultyLevel: 4,
+    type: "full-flow",
+    steps: [],
+  },
+  {
+    id: "UC25",
+    category: "redirect",
+    protocol: "OAuth",
+    title: "Parametri OAuth sospetti",
+    instruction:
+      "Valuta i parametri OAuth mostrati nella barra degli indirizzi.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 4,
+    type: "single-page",
+    steps: [],
+  },
+ 
+  // =========================================================
+  // OIDC PROVIDER & ENDPOINT CONFUSION — UC26-UC30
+  // =========================================================
+ 
+  {
+    id: "UC26",
+    category: "oidc_confusion",
+    protocol: "OIDC",
+    title: "Provider OIDC corretti",
+    instruction:
+      "Scegli tra i provider Google e Microsoft proposti dal servizio scolastico.",
+    expectedAnswer: "legitimate",
+    difficultyLevel: 2,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC27",
+    category: "oidc_confusion",
+    protocol: "OIDC",
+    title: "Provider duplicato",
+    instruction:
+      "Valuta i due provider Classroom Login e Classroom Secure Login.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC28",
+    category: "oidc_confusion",
+    protocol: "OIDC",
+    title: "Incoerenza tra issuer e brand",
+    instruction:
+      "Valuta la schermata che mostra il logo Google ma utilizza il dominio di un provider differente.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC29",
+    category: "oidc_confusion",
+    protocol: "OIDC",
+    title: "Discovery endpoint sospetto",
+    instruction:
+      "Valuta la configurazione OIDC caricata da un endpoint non istituzionale.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 4,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC30",
+    category: "oidc_confusion",
+    protocol: "OIDC",
+    title: "Provider sconosciuto",
+    instruction:
+      "Valuta il nuovo provider EduID Connect proposto dal portale scolastico.",
+    expectedAnswer: "suspicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+ 
+  // =========================================================
+  // SAML IDENTITY & ASSERTION ANOMALIES — UC31-UC36
+  // =========================================================
+ 
+  {
+    id: "UC31",
+    category: "saml",
+    protocol: "SAML",
+    title: "Attributi SAML coerenti",
+    instruction:
+      "Verifica gli attributi restituiti dal sistema dopo l'accesso al servizio scolastico.",
+    expectedAnswer: "legitimate",
+    difficultyLevel: 2,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC32",
+    category: "saml",
+    protocol: "SAML",
+    title: "Ruolo amministratore inatteso",
+    instruction:
+      "Controlla il ruolo assegnato al tuo account dopo l'accesso al servizio.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC33",
+    category: "saml",
+    protocol: "SAML",
+    title: "Identità incoerente",
+    instruction:
+      "Controlla l'identità mostrata dal servizio dopo il completamento del login.",
+    expectedAnswer: "malicious",
+    difficultyLevel: 2,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC34",
+    category: "saml",
+    protocol: "SAML",
+    title: "Sessione già attiva",
+    instruction:
+      "Apri il servizio scolastico e valuta la sessione di autenticazione già presente.",
+    expectedAnswer: "suspicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+  {
+    id: "UC35",
+    category: "saml",
+    protocol: "SAML",
+    title: "Login IdP-initiated inatteso",
+    instruction:
+      "Apri il collegamento ricevuto dalla scuola e valuta l'accesso automatico al servizio.",
+    expectedAnswer: "legitimate",
+    difficultyLevel: 4,
+    type: "full-flow",
+    steps: [],
+  },
+  {
+    id: "UC36",
+    category: "saml",
+    protocol: "SAML",
+    title: "Attributi SAML mancanti",
+    instruction:
+      "Verifica la completezza delle informazioni associate alla tua identità dopo l'accesso.",
+    expectedAnswer: "suspicious",
+    difficultyLevel: 3,
+    type: "single-page",
+    steps: [],
+  },
+ 
+  // =========================================================
+  // EMAIL COME VETTORE VERSO SSO PHISHING — UC37-UC40
+  // =========================================================
+ 
+  */
   {
     id: "UC37",
     category: "email",

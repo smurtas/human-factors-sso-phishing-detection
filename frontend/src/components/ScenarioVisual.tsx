@@ -8,6 +8,8 @@ import { GoogleUpdatedLoginMockup } from "./GoogleUpdatedLoginMockup";
 import { OAuthConsentMockup } from "./OAuthConsentMockup";
 import canvaLogo from "../assets/logo-canva.png";
 import padletLogo from "../assets/logo-padlet.png";
+import kahootLogo from "../assets/logo-kahoot.png";
+
 import { UC02Scenario } from "./UC02Scenario";
 import { UC06Scenario } from "./UC06Scenario";
 import { UC08Scenario } from "./UC08Scenario";
@@ -38,19 +40,19 @@ export function ScenarioVisual({
     return <EmailScenarioContainer scenarioId={scenario.id} />;
   }
   switch (scenario.id) {
-case "UC02":
-  return (
-    <UC02Scenario
-      completed={
-        sessionStorage.getItem(
-          "completedFlowScenarioId",
-        ) === "UC02"
-      }
-      onStart={() => {
-        onStartMicrosoftFlow?.();
-      }}
-    />
-  );
+    case "UC02":
+      return (
+        <UC02Scenario
+          completed={
+            sessionStorage.getItem(
+              "completedFlowScenarioId",
+            ) === "UC02"
+          }
+          onStart={() => {
+            onStartMicrosoftFlow?.();
+          }}
+        />
+      );
     case "UC03":
       return (
         <OAuthConsentMockup
@@ -95,6 +97,29 @@ case "UC02":
           provider="google"
         />
       );
+    case "UC13":
+  return (
+    <OAuthConsentMockup
+      appName="Kahoot!"
+      appLogo={kahootLogo}
+      accountName="Studente"
+      accountEmail="studente@scuola.it"
+      permissions={[
+        {
+          icon: "profile",
+          title: "Profilo",
+          description:
+            "Visualizzare il tuo nome e l'immagine del profilo",
+        },
+        {
+          icon: "email",
+          title: "Indirizzo email",
+          description:
+            "Visualizzare il tuo indirizzo email",
+        },
+      ]}
+    />
+  );
     case "UC14":
       return (
         <OAuthConsentMockup
@@ -122,6 +147,30 @@ case "UC02":
           ]}
         />
       );
+    case "UC15":
+  return (
+    <OAuthConsentMockup
+      appName="Canva!"
+      appLogo={canvaLogo}
+      accountName="Studente"
+      accountEmail="studente@scuola.it"
+      permissions={[
+        {
+          icon: "profile",
+          title: "Profilo",
+          description:
+            "Visualizzare il tuo nome e l'immagine del profilo",
+        },
+        {
+          icon: "email",
+          title: "Gmail",
+          description:
+            "Inviare email a tuo nome utilizzando il tuo account",
+        },
+      ]}
+    />
+  );
+
     case "UC16":
       return (
         <OAuthConsentMockup
@@ -157,6 +206,29 @@ case "UC02":
           ]}
         />
       );
+    case "UC17":
+  return (
+    <OAuthConsentMockup
+      appName="Padlet!"
+      appLogo={padletLogo}
+      accountName="Studente"
+      accountEmail="studente@scuola.it"
+      permissions={[
+        {
+          icon: "profile",
+          title: "Profilo",
+          description:
+            "Visualizzare il tuo nome e l'immagine del profilo",
+        },
+        {
+          icon: "drive",
+          title: "Accesso ai dati",
+          description:
+            "Accedere ai tuoi dati anche quando non utilizzi questa applicazione",
+        },
+      ]}
+    />
+  );
 
 
     default:
