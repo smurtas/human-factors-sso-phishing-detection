@@ -6613,3 +6613,9 @@
   }
 
 }
+
+.oauth-app-publisher {
+  margin: 4px 0 18px;
+  font-size: 14px;
+  color: #5f6368;
+}

@@ -9,6 +9,8 @@ import { OAuthConsentMockup } from "./OAuthConsentMockup";
 import canvaLogo from "../assets/logo-canva.png";
 import padletLogo from "../assets/logo-padlet.png";
 import kahootLogo from "../assets/logo-kahoot.png";
+import calendarLogo from "../assets/logo-calendar.png"
+import onedriveLogo from "../assets/logo-onedrive.png"
 
 import { UC02Scenario } from "./UC02Scenario";
 import { UC06Scenario } from "./UC06Scenario";
@@ -98,28 +100,28 @@ export function ScenarioVisual({
         />
       );
     case "UC13":
-  return (
-    <OAuthConsentMockup
-      appName="Kahoot!"
-      appLogo={kahootLogo}
-      accountName="Studente"
-      accountEmail="studente@scuola.it"
-      permissions={[
-        {
-          icon: "profile",
-          title: "Profilo",
-          description:
-            "Visualizzare il tuo nome e l'immagine del profilo",
-        },
-        {
-          icon: "email",
-          title: "Indirizzo email",
-          description:
-            "Visualizzare il tuo indirizzo email",
-        },
-      ]}
-    />
-  );
+      return (
+        <OAuthConsentMockup
+          appName="Kahoot!"
+          appLogo={kahootLogo}
+          accountName="Studente"
+          accountEmail="studente@scuola.it"
+          permissions={[
+            {
+              icon: "profile",
+              title: "Profilo",
+              description:
+                "Visualizzare il tuo nome e l'immagine del profilo",
+            },
+            {
+              icon: "email",
+              title: "Indirizzo email",
+              description:
+                "Visualizzare il tuo indirizzo email",
+            },
+          ]}
+        />
+      );
     case "UC14":
       return (
         <OAuthConsentMockup
@@ -148,28 +150,28 @@ export function ScenarioVisual({
         />
       );
     case "UC15":
-  return (
-    <OAuthConsentMockup
-      appName="Canva!"
-      appLogo={canvaLogo}
-      accountName="Studente"
-      accountEmail="studente@scuola.it"
-      permissions={[
-        {
-          icon: "profile",
-          title: "Profilo",
-          description:
-            "Visualizzare il tuo nome e l'immagine del profilo",
-        },
-        {
-          icon: "email",
-          title: "Gmail",
-          description:
-            "Inviare email a tuo nome utilizzando il tuo account",
-        },
-      ]}
-    />
-  );
+      return (
+        <OAuthConsentMockup
+          appName="Canva!"
+          appLogo={canvaLogo}
+          accountName="Studente"
+          accountEmail="studente@scuola.it"
+          permissions={[
+            {
+              icon: "profile",
+              title: "Profilo",
+              description:
+                "Visualizzare il tuo nome e l'immagine del profilo",
+            },
+            {
+              icon: "email",
+              title: "Gmail",
+              description:
+                "Inviare email a tuo nome utilizzando il tuo account",
+            },
+          ]}
+        />
+      );
 
     case "UC16":
       return (
@@ -207,28 +209,89 @@ export function ScenarioVisual({
         />
       );
     case "UC17":
-  return (
-    <OAuthConsentMockup
-      appName="Padlet!"
-      appLogo={padletLogo}
-      accountName="Studente"
-      accountEmail="studente@scuola.it"
-      permissions={[
-        {
-          icon: "profile",
-          title: "Profilo",
-          description:
-            "Visualizzare il tuo nome e l'immagine del profilo",
-        },
-        {
-          icon: "drive",
-          title: "Accesso ai dati",
-          description:
-            "Accedere ai tuoi dati anche quando non utilizzi questa applicazione",
-        },
-      ]}
-    />
-  );
+      return (
+        <OAuthConsentMockup
+          appName="Padlet!"
+          appLogo={padletLogo}
+          accountName="Studente"
+          accountEmail="studente@scuola.it"
+          permissions={[
+            {
+              icon: "profile",
+              title: "Profilo",
+              description:
+                "Visualizzare il tuo nome e l'immagine del profilo",
+            },
+            {
+              icon: "drive",
+              title: "Accesso ai dati",
+              description:
+                "Accedere ai tuoi dati anche quando non utilizzi questa applicazione",
+            },
+          ]}
+        />
+      );
+
+    case "UC18":
+      return (
+        <OAuthConsentMockup
+          appName="Google Calendar"
+          accountName="Studente"
+          accountEmail="studente@scuola.it"
+          publisher="Pluto Solutions Ltd"
+          appLogo={calendarLogo}
+          permissions={[
+            {
+              icon: "profile",
+              title: "Profilo",
+              description:
+                "Visualizzare il tuo nome e l'immagine del profilo",
+            },
+            {
+              icon: "calendar",
+              title: "Google Calendar",
+              description:
+                "Visualizzare gli eventi del tuo Google Calendar",
+            },
+          ]}
+        />
+      );
+    case "UC19":
+      return (
+        <OAuthConsentMockup
+          appName="Microsoft OneDrive"
+          appLogo={onedriveLogo}
+          accountName="Studente"
+          accountEmail="studente@scuola.it"
+          publisher="Microsoft Ltd"
+          permissions={[
+            {
+              icon: "profile",
+              title: "Profilo",
+              description:
+                "Visualizzare il tuo nome e l'immagine del profilo",
+            },
+            {
+              icon: "send-email",
+              title: "Outlook",
+              description:
+                "Leggere e inviare email utilizzando il tuo account",
+            },
+            {
+              icon: "drive",
+              title: "OneDrive",
+              description:
+                "Visualizzare, modificare e gestire tutti i file nel tuo OneDrive",
+            },
+            {
+              icon: "calendar",
+              title: "Calendario Outlook",
+              description:
+                "Visualizzare, creare e modificare gli eventi dei tuoi calendari",
+            },
+          ]}
+        />
+      );
 
 
     default:

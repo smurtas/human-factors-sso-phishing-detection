@@ -233,32 +233,34 @@ export const pilotScenarios: Scenario[] = [
     type: "single-page",
     steps: [],
   },
-  /*
+  
   {
     id: "UC18",
     category: "oauth_consent",
     protocol: "OAuth",
-    title: "Publisher sconosciuto",
+    title: "Valuta Google Calendar",
     instruction:
-      "Valuta la richiesta di autorizzazione di School Calendar Sync e le informazioni sul publisher.",
+      "Valuta la richiesta di autorizzazione di Google Calendar e le informazioni che vedi nella pagine.",
     expectedAnswer: "suspicious",
     difficultyLevel: 3,
     type: "single-page",
     steps: [],
   },
+  
   {
     id: "UC19",
     category: "oauth_consent",
     protocol: "OAuth",
-    title: "Impersonificazione del brand Microsoft",
+    title: "Autenticazione a Microsoft OneDrive",
     instruction:
-      "Valuta l'applicazione Microsoft School Sync, il publisher e i permessi richiesti.",
+      "Valuta l'applicazione Microsoft Onedrive, il publisher e i permessi richiesti.",
     expectedAnswer: "malicious",
     difficultyLevel: 3,
     type: "single-page",
     steps: [],
   },
  
+  /*
   // =========================================================
   // REDIRECT MANIPULATION — UC20-UC25
   // =========================================================

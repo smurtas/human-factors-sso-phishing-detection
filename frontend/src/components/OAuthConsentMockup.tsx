@@ -20,7 +20,7 @@ type OAuthConsentMockupProps = {
 
   accountName?: string;
   accountEmail?: string;
-
+  publisher?: string;
   permissions?: OAuthPermission[];
 };
 
@@ -311,7 +311,7 @@ export function OAuthConsentMockup({
 
   accountName = "Studente",
   accountEmail = "studente@scuola.it",
-
+  publisher,
   permissions,
 }: OAuthConsentMockupProps) {
 
@@ -425,6 +425,11 @@ export function OAuthConsentMockup({
               <h1>
                 Accedi a {appName}
               </h1>
+              {publisher && (
+                <p className="oauth-app-publisher">
+                  Publisher: {publisher}
+                </p>
+              )}
 
 
               <button
