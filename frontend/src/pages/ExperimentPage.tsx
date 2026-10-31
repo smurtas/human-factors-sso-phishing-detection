@@ -28,7 +28,6 @@ const STORAGE_KEY = "pilotScenarioResponses";
 const SCENARIO_ORDER_KEY = "pilotScenarioOrder";
 const CURRENT_INDEX_KEY = "pilotScenarioCurrentIndex";
 
-
 console.log(
   "participantProfile:",
   sessionStorage.getItem("participantProfile"),
@@ -322,6 +321,15 @@ export function ExperimentPage() {
       "completedFlowScenarioId",
     );
 
+  const flowInProgress =
+    (
+      currentScenario.id === "UC02" &&
+      completedFlowScenarioId !== "UC02"
+    ) ||
+    (
+      currentScenario.id === "UC07" &&
+      completedFlowScenarioId !== "UC07"
+    );
 
   /* =========================================================
      RESET VALUES WHEN SCENARIO CHANGES
@@ -797,10 +805,7 @@ export function ExperimentPage() {
           For all other scenarios it is shown immediately.
           ===================================================== */}
 
-      {!(
-        currentScenario.id === "UC07" &&
-        completedFlowScenarioId !== "UC07"
-      ) &&
+      {!flowInProgress &&
         (
           currentScenario.id !== "UC06" ||
           showEvaluation
